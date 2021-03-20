@@ -1,5 +1,5 @@
 const { ApolloServer, gql } = require('apollo-server')
-const { ImportSchema } = require('graphql-import')
+const { ImportSchema, importSchema } = require('graphql-import')
 
 const usuarios = [{
   id: 1,
@@ -96,7 +96,7 @@ const resolvers = {
 }
 
 const server = new ApolloServer({
-  typeDefs,
+  typeDefs: importSchema('./schema/index.graphql'),
   resolvers
 })
 

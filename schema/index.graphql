@@ -1,36 +1,8 @@
+# para funcionar tem que instalar a dependencia
+# npm i -s graphql-import 
+
+# import Usuario, Perfil from 'usuario.graphql'
+# import Query from 'query.graphql'
+# import Produto from 'produto.graphql'
+
 scalar Date
-
-type Produto {
-  nome: String!
-  preco: Float!
-  desconto: Float
-  precoComDesconto: Float
-}
-
-type Perfil {
-  id: Int!
-  nome: String!
-}
-
-type Usuario {
-  id: Int
-  nome: String!
-  email: String!
-  idade: Int
-  salario: Float
-  vip: Boolean
-  perfil: Perfil
-}
-
-# Pontos de entrada da sua API
-type Query {
-  ola: String
-  horaAtual: Date
-  usuarioLogado: Usuario
-  precoEmDestaque: Produto
-  numerosMegaSena: [Int!]!
-  usuarios: [Usuario]
-  usuario(id: Int): Usuario
-  perfis: [Perfil]
-  perfil(id: Int): Perfil
-}

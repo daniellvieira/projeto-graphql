@@ -1,19 +1,24 @@
+let id = 1
+function proximoId() {
+  return id ++
+}
+
 const usuarios = [{
-  id: 1,
+  id: proximoId(),
   nome: 'Daniel Vieira',
   email: 'danielfv@gmail.com',
   idade: 29,
   perfil_id: 1,
   status: 'ATIVO'
 }, {
-  id: 2,
+  id: proximoId(),
   nome: 'Airton Vieira',
   email: 'airton@gmail.com',
   idade: 34,
   perfil_id: 2,
   status: 'INATIVO'
 }, {
-  id: 3,
+  id: proximoId(),
   nome: 'Iorrana Pinto',
   email: 'iorrana@aaa.com',
   idade: 27,
@@ -26,4 +31,8 @@ const perfis = [
   { id: 2, nome: 'Administrador' }
 ]
 
-module.exports = { usuarios, perfis }
+module.exports = {
+  usuarios,
+  perfis,
+  proximoId
+}

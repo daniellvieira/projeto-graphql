@@ -11,4 +11,17 @@ type Mutation {
     dados: UsuarioInput!
     filtro: UsuarioFiltro!
   ): Usuario
+
+  novoPerfil(
+    dados: PerfilInput!
+  ): Perfil!
+
+  excluirPerfil(
+    filtro: PerfilFiltro!
+  ): Perfil
+
+  alterarPerfil(
+    dados: PerfilInput!
+    filtro: PerfilFiltro!
+  ): Perfil
 }

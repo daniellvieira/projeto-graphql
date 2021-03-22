@@ -1,7 +1,8 @@
 # para funcionar tem que instalar a dependencia
 # npm i -s graphql-import 
 
-# import Usuario, Perfil from 'Usuario.graphql'
+# import Usuario from 'Usuario.graphql'
+# import Perfil from 'Perfil.graphql'
 # import Query from 'Query.graphql'
 # import Produto from 'Produto.graphql'
 # import Mutation from 'Mutation.graphql'

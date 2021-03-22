@@ -1,11 +1,14 @@
 const { perfis } = require('../../data/db')
+const { indiceListagem } = require('../../data/functions')
 
 module.exports = {
   perfis() {
     return perfis
   },
-  perfil(_, args) {
-    const sels = perfis.filter(p => p.id === args.id)
-    return sels ? sels[0] : null
+  perfil(_, { filtro }) {
+    const i = indiceListagem(filtro, perfis)
+    if (i < 0) return null
+
+    return perfis[i]
   }
 }

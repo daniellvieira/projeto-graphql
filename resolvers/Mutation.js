@@ -29,18 +29,18 @@ module.exports = {
     return novo
   },
   excluirUsuario(_, { filtro }) {
-    const i = indiceUsuario(filtro)    
+    const i = indiceUsuario(filtro)
     if (i < 0) return null
     const excluidos = usuarios.splice(i, 1)
     return excluidos ? excluidos[0] : null
   },
-  alterarUsuario(_, args) {
-    const i = usuarios.findIndex(u => u.id === args.id)
+  alterarUsuario(_, { dados, filtro }) {
+    const i = indiceUsuario(filtro)
     if (i < 0) return null
     
     const usuario = {
       ...usuarios[i],
-      ...args
+      ...dados
     }
 
     usuarios.splice(i, 1, usuario)

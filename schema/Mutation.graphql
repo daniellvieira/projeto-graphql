@@ -4,7 +4,7 @@ type Mutation {
   ): Usuario!
 
   excluirUsuario(
-    id: Int!
+    filtro: UsuarioFiltro!
   ): Usuario
 
   alterarUsuario(
